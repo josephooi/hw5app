@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  read: MyString
+  voice_part: 
+
+two:
+  name: MyString
+  read: MyString
+  voice_part: 

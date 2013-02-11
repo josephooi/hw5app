@@ -1,0 +1,27 @@
+<h1>Voice Parts</h1>
+
+<table class="span3 center-table">
+  <tr>
+    <th>Name</th>
+    <th>Max</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @voice_parts.each do |voice_part| %>
+  <tr>
+    <td><%= voice_part.name %></td>
+    <td><%= voice_part.max %></td>
+    <td><%= link_to 'Show', voice_part %></td>
+    <td><%= link_to 'Edit', edit_voice_part_path(voice_part) %></td>
+    <td><%= link_to 'Destroy', voice_part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div class="text-center">
+  <%= link_to 'New Voice Part', new_voice_part_path %>
+</div>

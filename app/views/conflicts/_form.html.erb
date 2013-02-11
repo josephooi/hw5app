@@ -1,0 +1,75 @@
+<%= form_for(@conflict, html: {class: "form-horizontal"}) do |f| %>
+  <% if @conflict.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@conflict.errors.count, "error") %> prohibited this conflict from being saved:</h2>
+
+      <ul>
+      <% @conflict.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="control-group">
+  <%= f.label :date,
+              class: 'control-label' %>
+  <div class="controls">
+    <%= f.date_select :date %>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :start,
+              class: 'control-label' %>
+  <div class="controls">
+    <%= f.time_select :start%>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :end,
+              class: 'control-label' %>
+  <div class="controls">
+    <%= f.time_select :end%>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :reason,
+              class: 'control-label' %>
+  <div class="controls">
+    <%= f.text_field :reason %>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :type_of_conflict,
+              class: 'control-label' %>
+  <div class="controls">
+    <div class="form-inline">
+      <%= f.radio_button(:type_of_conflict, "PAC-Excused") %>
+      <%= f.label(:type_of_conflict, "PAC-Excused") %>
+    </div>
+    <div class="form-inline">
+      <%= f.radio_button(:type_of_conflict, "Excused") %>
+      <%= f.label(:type_of_conflict, "Excused") %>
+    </div>
+    <div class="form-inline">
+      <%= f.radio_button(:type_of_conflict, "Good Unexcused") %>
+      <%= f.label(:type_of_conflict, "Good Unexcused") %>
+    </div>
+    <div class="form-inline">
+      <%= f.radio_button(:type_of_conflict, "Bad Unexcused") %>
+      <%= f.label(:type_of_conflict, "Bad Unexcused") %>
+    </div>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= f.label :singer, class: 'control-label' %>
+  <div class="controls">
+    <%= f.collection_select :singer_id, Singer.all, :id, :name %>
+  </div>
+</div>
+
+<div class="form-actions" style="text-align: center">
+  <%= f.submit class: "btn btn-large btn-primary" %>
+</div>
+<% end %>

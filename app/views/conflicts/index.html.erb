@@ -1,0 +1,36 @@
+<h1>Conflicts</h1>
+
+<table class="span9 center-table">
+  <tr>
+    <th>Date</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Reason</th>
+    <th>Type of conflict</th>
+    <th>Singer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @conflicts.each do |conflict| %>
+  <tr>
+    <td><%= conflict.date.strftime("%d %b %y") %></td>
+    <td><%= conflict.start.strftime("%I:%M%p") %></td>
+    <td><%= conflict.end.strftime("%I:%M%p") %></td>
+    <td><%= conflict.reason %></td>
+    <td><%= conflict.type_of_conflict %></td>
+    <td><%= conflict.singer_name %></td>
+    <td><%= link_to 'Show', conflict %></td>
+    <td><%= link_to 'Edit', edit_conflict_path(conflict) %></td>
+    <td><%= link_to 'Destroy', conflict, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div class="text-center">
+  <%= link_to 'New Conflict', new_conflict_path %>
+</div>
+

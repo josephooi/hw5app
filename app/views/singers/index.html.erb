@@ -1,0 +1,35 @@
+<h1>Singers</h1>
+
+<table class="span5 center-table">
+  <tr>
+    <th>Name</th>
+    <th>Read</th>
+    <th>Voice Part</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @singers.each do |singer| %>
+  <tr>
+    <td><%= singer.name %></td>
+    <td>
+      <% if (singer.read == "1") %>
+        <%= "Yes" %>
+      <% else %>
+        <%= "No" %>
+      <% end %>
+    </td>
+    <td><%= singer.voice_part_name %></td>
+    <td><%= link_to 'Show', singer %></td>
+    <td><%= link_to 'Edit', edit_singer_path(singer) %></td>
+    <td><%= link_to 'Destroy', singer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<div class="text-center">
+  <%= link_to 'New Singer', new_singer_path %>
+</div>

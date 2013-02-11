@@ -1,0 +1,45 @@
+<%= form_for(@singer, html: {class: "form-horizontal"}) do |f| %>
+  <% if @singer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@singer.errors.count, "error") %> prohibited this singer from being saved:</h2>
+
+      <ul>
+      <% @singer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="offset2">
+  <div class="control-group">
+    <%= f.label :name,
+                class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :read,
+                class: 'control-label' %>
+    <div class="controls">
+      <div class="form-inline">
+        <%= f.check_box(:read) %>
+        <%= f.label(:read, "Can read music") %>
+      </div>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :voice_part, class: 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select :voice_part_id, VoicePart.all, :id, :name %>
+    </div>
+  </div>
+
+</div>
+
+<div class="form-actions" style="text-align: center">
+  <%= f.submit class: "btn btn-large btn-primary" %>
+</div>
+
+<% end %>

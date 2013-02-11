@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<div class="text-center">
+    <p>
+      <b>Name:</b>
+      <%= @singer.name %>
+    </p>
+
+    <p>
+      <b>Can read music:</b>
+      <% if (@singer.read == "1") %>
+          <%= "Yes" %>
+      <% else %>
+          <%= "No" %>
+      <% end %>
+    </p>
+
+    <p>
+      <b>Voice part:</b>
+      <%= @singer.voice_part_name %>
+    </p>
+
+  <%= link_to 'Edit', edit_singer_path(@singer) %> |
+  <%= link_to 'Back', singers_path %>
+</div>
+
+
