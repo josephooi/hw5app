@@ -1,4 +1,6 @@
 Hw5app::Application.routes.draw do
+  devise_for :users
+
   resources :singers
 
 
