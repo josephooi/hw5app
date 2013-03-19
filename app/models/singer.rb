@@ -8,4 +8,6 @@
   def voice_part_name
     voice_part.name if voice_part
   end
+
+  scope :can_read, where("read = '1'")
 end

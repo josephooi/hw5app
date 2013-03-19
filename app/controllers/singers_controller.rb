@@ -2,7 +2,7 @@ class SingersController < ApplicationController
   # GET /singers
   # GET /singers.json
   def index
-    @singers = Singer.all
+    @singers = Singer.can_read
 
     respond_to do |format|
       format.html # index.html.erb
