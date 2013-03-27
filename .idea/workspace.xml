@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94f7c77d-6b70-4fd6-956c-7a666103b512" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/hw5app.iml" afterPath="$PROJECT_DIR$/.idea/hw5app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/singers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/singers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/singer.rb" afterPath="$PROJECT_DIR$/app/models/singer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/singers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/singers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hw5app.iws" />
@@ -731,11 +725,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="RSpec.singer_spec" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Production: hw5app" />
-      <item index="4" class="java.lang.String" itemvalue="Rails.Development: hw5app" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: hw5app" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: hw5app" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.singer_spec" />
     </list>
     <recent_temporary>
       <list size="1">
