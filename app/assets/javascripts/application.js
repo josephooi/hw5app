@@ -13,3 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function () {
+    $('#hideshow').click(
+        function() {
+            if($('#hideshow').text()=="Show help text") {
+                $('#hideshow').text("Hide help text")
+            }
+            else {
+                $('#hideshow').text("Show help text")
+            }
+            $('#message').toggle();
+        }
+    );
+    $('#hideshow').click();
+})

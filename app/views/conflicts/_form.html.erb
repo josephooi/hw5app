@@ -63,6 +63,16 @@
 </div>
 
 <div class="control-group">
+    <span id="hideshow" class="btn btn-small">
+        Hide help text
+    </span>
+
+    <div id="message">
+        If you are not sure what category your conflict falls under, please select Bad Unexcused (BU).
+    </div>
+</div>
+
+<div class="control-group">
   <%= f.label :singer, class: 'control-label' %>
   <div class="controls">
     <%= f.collection_select :singer_id, Singer.all, :id, :name %>
@@ -72,4 +82,7 @@
 <div class="form-actions" style="text-align: center">
   <%= f.submit class: "btn btn-large btn-primary" %>
 </div>
+
+
+
 <% end %>
